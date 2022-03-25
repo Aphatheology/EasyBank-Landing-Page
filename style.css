@@ -1,0 +1,447 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    width: 100vw;
+    padding: 25px 10% 0px;
+    margin-bottom: 25px;
+}
+
+.desktop-header {
+    display: none;
+}
+
+#menu {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    background-color: rgba(7, 0, 0, 0.1);
+    position: absolute;
+    display: none;
+    justify-content: center; 
+    left: 0;
+    top: 10%;
+}
+
+#menu div {
+    background-color: hsl(220, 16%, 96%);
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px auto;
+    width: 75%;
+    margin: 30px auto;
+    border: 1px solid hsl(220, 16%, 96%);
+      
+}
+
+/* #hamburger:hover #menu {
+    display: block;
+} */
+
+#menu a {
+    display: inline-block;
+    min-width: 50%;
+    margin: 15px auto;
+    color: black;
+    text-decoration: none;
+}
+
+
+#menu a:hover {
+    cursor: pointer;
+    color: hsl(136, 65%, 51%);
+}
+
+.hero-section {
+    width: 100vw;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.hero-section div {
+    width: 100%;
+    max-height: 100%;
+    background-image: url('images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.hero-section img {
+    text-align: center;
+    max-width: 90%;
+    max-height: 100%;
+    margin-top: -30%;
+}
+
+.hero-section h1 {
+    margin: 25px;
+    font-size: 3rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    line-height: 125%;
+    width: 75vw;
+    margin: auto;
+}
+
+.hero { 
+    display: none;
+}
+
+.invite {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin: 30px 0px 50px;
+    background: linear-gradient(to right, hsl(136, 65%, 51%) , hsl(233, 26%, 24%));
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.invite:hover {
+    color: hsl(136, 65%, 51%);
+}
+
+.why-choose {
+    width: 100vw;
+    padding: 50px 25px;
+    text-align: center;
+    background-color: hsl(220, 16%, 96%);
+
+}
+
+.why-choose h2 {
+    margin: 25px 0px;
+    font-size: 2rem;
+}
+
+.why-choose p {
+    font-size: 1.5rem;
+    color: hsl(233, 8%, 62%);
+    line-height: 125%;
+    padding: 0px 15px;
+}
+
+.choose-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choose-container div {
+    margin: 25px auto;
+}
+
+.choose-container div h3 {
+    font-size: 2rem;
+    margin: 25px 0px;
+}
+
+
+.articles {
+    padding: 50px 10px;
+    width: 100vw;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.articles h2 {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 2rem;
+}
+
+.articles p.author {
+    color: hsl(233, 8%, 62%);
+    font-size: 0.75rem;
+}
+
+.articles p {
+    color: hsl(233, 8%, 62%);
+}
+
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.articles-container div {
+    margin-top: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 50px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.articles-container div p, .articles-container div h3 {
+    padding: 0px 40px;
+    margin: 10px auto;
+}
+
+.articles-container div img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+
+footer {
+    background-color: hsl(233, 26%, 24%);
+    width: 100vw;
+    color: white !important;
+    text-align: center;
+    padding: 25px 0px;
+}
+
+footer div a {
+    display: inline-block;
+    margin: 5px 0px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+footer div a:hover  {
+    color: hsl(136, 65%, 51%);
+    fill: hsl(136, 65%, 51%);
+}
+
+footer div:first-of-type a {
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+
+
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+    padding: 10px;
+}
+
+.attribution a { 
+    color: hsl(136, 65%, 51%); 
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (min-width: 750px) {
+
+    body {
+        overflow-x: hidden;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+
+    .desktop-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 75px;
+        width: 90vw;
+        margin: 10px auto 0px;
+    }
+
+    .desktop-header  .links {
+        margin: 0px 15px;
+        min-width: 50%;
+    }
+
+    .desktop-header .invite {
+        display: inline-block;
+        padding: 15px 30px;
+        border-radius: 50px;
+        background: linear-gradient(to right, hsl(136, 65%, 51%) , hsl(233, 26%, 24%));
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .desktop-header a {
+        display: inline-block;
+        margin: 0px 15px ;
+        padding-bottom: 35px;
+        color: black;
+        text-decoration: none;
+        border-bottom: 3px solid white;
+    }
+
+    .desktop-header a:hover {
+        cursor: pointer;
+        border-bottom: 3px solid hsl(136, 65%, 51%);
+    }
+
+    .hero-section {
+        display: none;
+    }
+
+    .hero {
+        width: 100vw;
+        margin: 0px auto;
+        background-color: hsl(220, 16%, 98%);
+        display: block;
+    }
+
+    .hero .herocontainer {
+        width: 95vw;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .hero .herocontainer .image {
+        max-width: 100%;
+        height: 100%;
+        background-image: url('images/bg-intro-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .hero .herocontainer .image img {
+        text-align: center;
+        width: 100%;
+        max-height: 100%;
+        position: relative;
+        margin-top: -20%;
+        right: -25%;
+    }
+
+    .hero .herocontainer .text {
+        padding: 25px 75px;
+        width: 60%;
+    }
+
+    .hero .herocontainer .text h1 {
+        margin: 25px 0px;
+        font-size: 3rem;
+    }
+    
+    .hero .herocontainer .text p {
+        font-size: 1.5rem;
+        line-height: 125%;
+    }
+    
+    .why-choose p.choose {
+        width: 45%;
+        line-height: 125%;
+    }
+
+    .articles-container , .choose-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+        width: 99%;
+        margin: auto;
+    }
+
+    .articles-container div , .choose-container div {
+        width: 40%;
+        margin: 50px 15px;
+    }
+
+    .choose-container div:first-child {
+        margin-left: 0;
+    }
+
+    .why-choose {
+        text-align: left;
+        padding: 100px;
+    }
+
+    .why-choose p {
+        padding: 0;
+    }
+
+    footer .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 25px;
+    }
+
+    footer .footer-container .footerlogo {
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    footer .footer-container div {
+        text-align: left;
+    }
+
+    footer .footer-container .right {
+        text-align: right;
+        min-width: 40%;
+    }
+
+    .desktop-header .invite, a.invite {
+        border-radius: 50;
+        width: 170px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .desktop-header .invite, a.invite {
+        border-radius: 50;
+        width: 170px;
+    }
+
+    .articles-container , .choose-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        flex-wrap: nowrap;
+        width: 99%;
+        margin: auto;
+    }
+
+    .articles-container div , .choose-container div {
+        width: 25%;
+        margin: 50px 15px;
+    }
+
+    .hero .herocontainer .text {
+        padding: 25px 75px;
+        width: 40%;
+    }
+}
